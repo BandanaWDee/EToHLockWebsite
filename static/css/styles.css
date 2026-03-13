@@ -474,3 +474,67 @@ main {
     margin: 8px 0;
     display: block;
 }
+
+#warning-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+#warning-box {
+    max-width: 400px;
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: var(--bg);
+}
+
+#warning-title {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+#warning-body {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+#warning-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+#warning-proceed {
+    flex: 1;
+    padding: 8px 16px;
+    background: var(--text);
+    color: var(--bg);
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#warning-leave {
+    padding: 8px 16px;
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid var(--dim);
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+}
