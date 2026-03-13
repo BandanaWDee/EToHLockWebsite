@@ -29,15 +29,18 @@ If you have new Discord IDs that need to be added, let a staff member know.
 ## Running Locally
 
 1. Install dependencies:
-   ```
-   pip install flask google-auth google-api-python-client
-   ```
+```
+   pip install flask google-auth google-api-python-client markdown python-dotenv
+```
 
-2. Place your `service.json` Google service account file in the project root. The account needs read access to the main spreadsheet.
+2. Create a `.env` file in the project root with your Google service account credentials:
+```
+   GOOGLE_CREDENTIALS={"type":"service_account", ...}
+```
 
 3. Run the app:
-   ```
+```
    python app.py
-   ```
+```
 
 The site will be available at `http://localhost:5000`.
